@@ -3,6 +3,7 @@ import { RiMovie2AiFill } from "react-icons/ri";
 import { IoMdMoon } from "react-icons/io";
 import { FaHome } from "react-icons/fa";
 import { FaInfoCircle } from "react-icons/fa";
+import Movie from "./components/Movie";
 export default function Home() {
   return (
     <div className="min-h-[100dvh] bg-black p-10">
@@ -29,6 +30,23 @@ export default function Home() {
           <RiMovie2AiFill className="text-red-500 font-bold text-3xl" />
         </div>
       </header>
+      <div className="my-10 w-full p-5 bg-slate-900 flex justify-center items-center">
+        <div className="space-x-5 text-md font-semibold text-white">
+          <Link href="/trending">Trending</Link>
+          <Link href="/top-rated">Top Rated</Link>
+        </div>
+      </div>
+      <div className="grid gap-5 grid-cols-12">
+        <div className="col-span-12 md:col-span-4 lg:col-span-4">
+          <Movie />
+        </div>
+        <div className="col-span-12 md:col-span-4 lg:col-span-4">
+          <Movie />
+        </div>
+        <div className="col-span-12 md:col-span-4 lg:col-span-4">
+          <Movie />
+        </div>
+      </div>
     </div>
   );
 }
