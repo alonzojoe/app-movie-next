@@ -25,7 +25,7 @@ export default function Home() {
         </div>
         <div className="flex items-center gap-4">
           <IoMdMoon className="cursor-pointer font-bold text-3xl" />
-          <button className="px-2 font-bold text-md py-2 bg-red-600 rounded-md hover:bg-red-700 hidden md:block">
+          <button className="px-2 font-bold text-md py-2 bg-red-600 rounded-md hidden md:block">
             Vista Stream
           </button>
           <RiMovie2AiFill className="text-red-500 font-bold text-3xl" />
@@ -44,19 +44,19 @@ export default function Home() {
             className="py-1 px-2 border border-slate-500 rounded-md outline-none bg-gray-300 w-full text-xl placeholder:text-gray-400"
             placeholder="Search Movie Title..."
           />
-          <button className="bg-red-600 px-3 py-1 text-xl rounded-md text-white">
+          <button className="bg-red-600 hover:bg-red-700 cursor-pointer px-3 py-1 text-xl rounded-md text-white">
             <FaSearch />
           </button>
         </div>
       </div>
       <div className="grid gap-5 grid-cols-12">
-        <div className="col-span-12 md:col-span-4 lg:col-span-4">
+        <div className="col-span-12 md:col-span-6 lg:col-span-3">
           <Movie />
         </div>
-        <div className="col-span-12 md:col-span-4 lg:col-span-4">
+        <div className="col-span-12 md:col-span-6 lg:col-span-3">
           <Movie />
         </div>
-        <div className="col-span-12 md:col-span-4 lg:col-span-4">
+        <div className="col-span-12 md:col-span-6 lg:col-span-3">
           <Movie />
         </div>
       </div>
