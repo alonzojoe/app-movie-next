@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { BiSolidLike } from "react-icons/bi";
 const Movie = () => {
   return (

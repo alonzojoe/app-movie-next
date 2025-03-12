@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Header from "@/app/components/Header";
+import Navbar from "@/app/components/Navbar";
+import Providers from "@/app/Providers";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -14,7 +17,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "App Movie Next",
-  description: "This is a movie app project built using NextJS, TailwindCSS and third party API.",
+  description:
+    "This is a movie app project built using NextJS, TailwindCSS and third party API.",
 };
 
 export default function RootLayout({
@@ -25,9 +29,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-[100dvh] w-full bg-black p-[1rem] sm:p-[2rem] lg:p-[2rem] xl:p-[5rem] 2xl:p[6-rem]`}
       >
-        {children}
+        <Providers>
+          <Header />
+          <Navbar />
+          {children}
+        </Providers>
       </body>
     </html>
   );
