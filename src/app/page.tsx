@@ -7,7 +7,7 @@ import { FaSearch } from "react-icons/fa";
 import Movie from "./components/Movie";
 export default function Home() {
   return (
-    <div className="min-h-[100dvh] bg-black p-10">
+    <div className="min-h-[100dvh] w-full bg-black p-[1rem] sm:p-[2rem] lg:p-[2rem] xl:p-[5rem] 2xl:p[6-rem]">
       <header className="flex justify-between items-center text-white">
         <div className="flex gap-5 font-bold">
           <div>
@@ -50,6 +50,9 @@ export default function Home() {
         </div>
       </div>
       <div className="grid gap-5 grid-cols-12">
+        <div className="col-span-12 md:col-span-6 lg:col-span-3">
+          <Movie />
+        </div>
         <div className="col-span-12 md:col-span-6 lg:col-span-3">
           <Movie />
         </div>
