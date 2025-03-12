@@ -1,36 +1,9 @@
 import Link from "next/link";
-import { RiMovie2AiFill } from "react-icons/ri";
-import { IoMdMoon } from "react-icons/io";
-import { FaHome } from "react-icons/fa";
-import { FaInfoCircle } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 import Movie from "./components/Movie";
 export default function Home() {
   return (
-    <div className="min-h-[100dvh] w-full bg-black p-[1rem] sm:p-[2rem] lg:p-[2rem] xl:p-[5rem] 2xl:p[6-rem]">
-      <header className="flex justify-between items-center text-white">
-        <div className="flex gap-5 font-bold">
-          <div>
-            <Link href="/about">
-              <span className="hidden md:block text-xl">Home</span>
-              <FaHome className="cursor-pointer font-bold text-3xl md:hidden" />
-            </Link>
-          </div>
-          <div>
-            <Link href="/about">
-              <span className="hidden md:block text-xl">About</span>
-              <FaInfoCircle className="cursor-pointer font-bold text-3xl md:hidden" />
-            </Link>
-          </div>
-        </div>
-        <div className="flex items-center gap-4">
-          <IoMdMoon className="cursor-pointer font-bold text-3xl" />
-          <button className="px-2 font-bold text-md py-2 bg-red-600 rounded-md hidden md:block">
-            Vista Stream
-          </button>
-          <RiMovie2AiFill className="text-red-500 font-bold text-3xl" />
-        </div>
-      </header>
+    <div>
       <div className="my-10 w-full p-5 bg-slate-900 flex justify-center items-center">
         <div className="space-x-5 text-md font-semibold text-white">
           <Link href="/trending">Trending</Link>
