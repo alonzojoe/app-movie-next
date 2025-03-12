@@ -1,15 +1,9 @@
-import Link from "next/link";
 import { FaSearch } from "react-icons/fa";
-import Movie from "../components/Movie";
+import Movie from "@/app/components/Movie";
+
 export default function Home() {
   return (
     <div>
-      <div className="my-10 w-full p-5 bg-slate-900 flex justify-center items-center">
-        <div className="space-x-5 text-md font-semibold text-white">
-          <Link href="/trending">Trending</Link>
-          <Link href="/top-rated">Top Rated</Link>
-        </div>
-      </div>
       <div className="my-10">
         <div className="flex gap-3">
           <input
