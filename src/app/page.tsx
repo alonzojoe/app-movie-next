@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FaSearch } from "react-icons/fa";
-import Movie from "./components/Movie";
+import Movie from "../components/Movie";
 export default function Home() {
   return (
     <div>
