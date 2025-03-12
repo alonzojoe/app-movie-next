@@ -2,7 +2,7 @@ import Link from "next/link";
 import { IoIosArrowBack } from "react-icons/io";
 const About = () => {
   return (
-    <div className="space-y-5">
+    <div className="space-y-5 mt-10">
       <div className="text-white flex items-center justify-between">
         <Link href="/">
           <IoIosArrowBack className="text-2xl font-bold" />
