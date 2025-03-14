@@ -1,7 +1,29 @@
 import { FaSearch } from "react-icons/fa";
 import Movie from "@/app/components/Movie";
 
-export default function Home() {
+const API_KEY = process.env.API_KEY;
+
+type HomeProps = {
+  searchParams: {
+    genre: string;
+  };
+};
+
+export default async function Home({ searchParams }: HomeProps) {
+  const genre = searchParams.genre || "trending"; // Default to trending
+  const endpoint =
+    genre === "top-rated" ? "movie/top_rated" : "trending/all/week";
+
+  const res = await fetch(
+    `https://api.themoviedb.org/3/${endpoint}?api_key=${API_KEY}&language=en-US&page=1`
+  );
+
+  const data = await res.json();
+
+  const movies = data.results;
+
+  console.log("movies", movies);
+
   return (
     <div>
       <div className="my-10">
