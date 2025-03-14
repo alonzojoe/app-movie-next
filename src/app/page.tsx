@@ -15,7 +15,7 @@ export default async function Home({ searchParams }: HomeProps) {
     genre === "top-rated" ? "movie/top_rated" : "trending/all/week";
 
   const res = await fetch(
-    `https://api.themoviedb.osrg/3/${endpoint}?api_key=${API_KEY}&language=en-US&page=1`
+    `https://api.themoviedb.org/3/${endpoint}?api_key=${API_KEY}&language=en-US&page=1`
   );
 
   const data = await res.json();
