@@ -21,7 +21,7 @@ const Movie = ({ movie }: MovieProps) => {
         style={{
           backgroundImage: `url(${imageSrc})`,
           backgroundSize: `cover`,
-          backgroundPosition: `top`,
+          backgroundPosition: `center`,
         }}
       ></div>
       <div className="mt-3">
