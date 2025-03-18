@@ -9,6 +9,13 @@ type HomeProps = {
   };
 };
 
+type Movie = {
+  title: string;
+  poster_path: string;
+  release_date: string;
+  vote_count: number;
+};
+
 export default async function Home({ searchParams }: HomeProps) {
   const genre = searchParams.genre || "trending"; // Default to trending
   const endpoint =
@@ -20,7 +27,7 @@ export default async function Home({ searchParams }: HomeProps) {
 
   const data = await res.json();
 
-  const movies = data.results;
+  const movies = data.results as Movie[];
 
   console.log("genre", genre);
   console.log("movies", movies);
@@ -40,18 +47,14 @@ export default async function Home({ searchParams }: HomeProps) {
         </div>
       </div>
       <div className="grid gap-5 grid-cols-12">
-        <div className="col-span-12 md:col-span-6 lg:col-span-3">
-          <Movie />
-        </div>
-        <div className="col-span-12 md:col-span-6 lg:col-span-3">
-          <Movie />
-        </div>
-        <div className="col-span-12 md:col-span-6 lg:col-span-3">
-          <Movie />
-        </div>
-        <div className="col-span-12 md:col-span-6 lg:col-span-3">
-          <Movie />
-        </div>
+        {movies.map((movie, index) => (
+          <div
+            className="col-span-12 md:col-span-6 lg:col-span-3"
+            key={`${movie.title}-${index}`}
+          >
+            <Movie movie={movie} />
+          </div>
+        ))}
       </div>
     </div>
   );
